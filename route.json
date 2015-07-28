@@ -1,0 +1,7 @@
+{
+	"map":	{
+		"beer":	"Beer"
+	},
+	"default":		"Home",
+	"not_found":	"NotFound"
+}

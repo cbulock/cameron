@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<article>
+
+		<header id='me'>
+			<img src='//www.gravatar.com/avatar/baf1ada66011a8dace4bee65cf78cb21?s=500&d=retro&r=pg'>
+			<h1>Cameron Bulock</h1>
+		</header>
+
+		<section id='tagline'>
+			<p>Father and tech guy from Lansing, MI</p>
+		</section>
+
+		<section id='hobbies'>
+		<h2>Hobbies</h2>
+			<ul>
+				<li><a href='gadgets'>Gadgets</a></li>
+				<li><a href='beer'>Beer</a></li>
+				<li><a href='https://github.com/cbulock'>Code</a></li>
+			</ul>
+		</section>
+
+	</article>
+
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel='stylesheet' type='text/css' media='screen' href='css/home.css' />
+{% endblock %}

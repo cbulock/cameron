@@ -1,0 +1,29 @@
+{
+ "name" : "cbulock/me",
+ "description" : "Cameron Bulock's Personal Page",
+ "homepage" : "http://cbulock.github.com/me/",
+ "authors" : [
+  {
+   "name" : "Cameron Bulock",
+   "email" : "cameron@bulock.com",
+   "homepage" : "http://cameron.bulock.com",
+   "role" : "Developer"
+  }
+ ],
+ "support" : {
+  "issues" : "https://github.com/cbulock/me/issues",
+  "source" : "https://github.com/cbulock/me"
+ },
+ "minimum-stability" : "dev",
+ "prefer-stable" :  true,
+ "require" : {
+  "php" : ">=5.4",
+  "cbulock/simple-router": "dev-master",
+  "twig/twig": "1.14.*"
+ },
+ "autoload" : {
+  "psr-4" : {
+    "cbulock\\me\\" : "src/"
+  }
+ }
+}

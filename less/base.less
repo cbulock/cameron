@@ -1,0 +1,56 @@
+@import 'inc/typography';
+@import 'inc/colors';
+
+body {
+	background-color: @background_color;
+	color: @text_color;
+	margin: 0;
+	&> header {
+		width: 100%;
+		background-color: @dark_color;
+		ul {
+			width: 20rem;
+			margin: 0 0 0 auto;
+			li {
+				display: table-cell;
+				text-align: center;
+				width: 1%;
+				text-transform: uppercase;
+				a {
+					padding-left: 0.2rem;
+				}
+			}
+		}
+	}
+}
+
+a {
+	color: @text_color;
+	text-decoration: none;
+	&:hover {
+		color: darken(@text_color, 25%);
+		text-decoration: underline;
+	}
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+main {
+	margin: 1rem;
+}
+
+footer {
+	margin-top: 2rem;
+	background-color: @secondary_color;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1rem;
+	p {
+		font-size: 0.7rem;
+		text-align: center;
+		line-height: 1.3rem;
+	}
+}

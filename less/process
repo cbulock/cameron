@@ -1,0 +1,2 @@
+lessc -x base.less > ../css/base.css
+lessc -x home.less > ../css/home.css

@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block title %}Beer{% endblock %}
+
+{% block content %}
+
+	<article>
+
+	<section>
+		<h3>Recent New Beers</h3>
+		{% for beer in recent %}
+			<p>
+				<i class="fa fa-beer"></i>
+				<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
+			</p>
+		{% endfor %}
+	</section>
+
+	<section>
+		<h3>Recent Favorite Styles</h3>
+		{% for style in recent_fav_styles %}
+			<p>{{ style.beer_type }}</p>
+		{% endfor %}
+	</section>
+
+	</article>
+
+{% endblock %}

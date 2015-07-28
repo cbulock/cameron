@@ -1,0 +1,56 @@
+@import 'inc/colors';
+
+#me {
+	img {
+		width: 10rem;
+		height: 10rem;
+		border-radius: 5rem;
+	}
+	h1 {
+		display: inline-block;
+		padding-left: 1rem;
+		vertical-align: top;
+		text-transform: uppercase;
+		line-height: 2.3rem;
+	}
+}
+
+#tagline {
+	p {
+		font-style: italic;
+		margin-top: 0;
+	}
+}
+
+#hobbies {
+	width: 11rem;
+	h2 {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+	li {
+		font-size: 1.6rem;
+		font-weight: 600;
+		font-style: italic;
+		margin: 1rem;
+		width: 10rem;
+		background-color: @third_color;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: 0 2rem 2rem 0;
+		transition: width 300ms, background-color 300ms;
+		&:hover {
+			background-color: darken(@third_color, 6%);
+			width: 11rem;
+			transition: width 500ms, background-color 500ms;
+		}
+		a {
+			display: block;
+			padding: 1.7rem;
+			&:hover {
+				text-decoration: none;
+				color: @text_color;
+			}
+		}
+	}
+}

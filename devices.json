@@ -1,0 +1,37 @@
+{
+	"nokia3390": {
+		"name": "Nokia 3390"
+	},
+	"nokia3650": {
+		"name":	"Nokia 3650",
+		"OS":		"Series 60"
+	},
+	"motopebl": {
+		"name":	"Motorola Pebl"
+	},
+	"htc": {
+		"name":	"HTC",
+		"OS":		"Windows Mobile 6",
+		"notes":	"Windows mobile phone, can't recall the name"
+	},
+	"palmpre": {
+		"name":	"Palm Pre",
+		"OS":		"WebOS"
+	},
+	"htcevo": {
+		"name":	"HTC EVO 4G",
+		"OS":		"Android"
+	},
+	"galaxynexus": {
+		"name":	"Galaxy Nexus",
+		"OS":		"Android"
+	},
+	"nexus5": {
+		"name":	"Nexus 5",
+		"OS":		"Android"
+	},
+	"nexus6": {
+		"name":	"Nexus 6",
+		"OS":		"Android"
+	}
+}
