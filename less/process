@@ -1,2 +1,3 @@
 lessc -x base.less > ../css/base.css
 lessc -x home.less > ../css/home.css
+lessc -x beer.less > ../css/beer.css

@@ -1,0 +1,38 @@
+section {
+	background-color: chocolate;
+	padding: 1rem;
+	margin: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0.5rem;
+	& > div {
+		flex-basis: 50%;
+	}
+	h3, h5 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.beers {
+	a {
+		margin-left: 1.3rem;
+	}
+	.fa-beer {
+		position: absolute;
+		top: 6px;
+		left: 0;
+	}
+	.background {
+		-webkit-text-stroke: 1px white;
+		text-stroke: 1px white;
+	}
+	.score {
+		z-index: 2;
+		color: #FBB117;
+	}
+	.rating {
+		position: relative;
+	}
+}
+

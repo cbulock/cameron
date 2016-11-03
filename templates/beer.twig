@@ -7,22 +7,77 @@
 	<article>
 
 	<section>
+		<h5>Festivals/Events I Have Attended Recently</h5>
+		<ul>
+			<li>Art & Craft BeerFest (REO Town, Lansing)</li>
+			<li>Beerfest at the Ballpark, Spring (Cooley Law School Stadium, Lansing)</li>
+			<li>World Expo of Beer (Frankenmuth)</li>
+			<li>Festival of the Moon (Old Town, Lansing)<li>
+			<li>The Art of Brewing: Beer Edition (Broad Art Museum, East Lansing)</li>
+			<li>Taste of Downtown (Washington Square, Lansing)</li>
+			<li>Beerfest at the Ballpark, Fall (Cooley Law School Stadium, Lansing)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h5>Recent Brewery/Distillery Visits</h5>
+		<ul>
+			<li>Founders Brewing (Grand Rapids)</li>
+			<li>American Fifth Spirits (Lansing)</li>
+			<li>Eagle Monk (Lansing)</li>
+			<li>New Holland Brewing (New Holland)</li>
+			<li>Grand Rapids Brewing Company (Grand Rapids)</li>
+			<li>B.O.B.'s Brewery (Grand Rapids)</li>
+		</ul>
+	</section>
+
+	<section id='recent_beers' class='beers'>
 		<h3>Recent New Beers</h3>
 		{% for beer in recent %}
-			<p>
-				<i class="fa fa-beer"></i>
-				<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
-			</p>
+		<div class='beer'>
+			<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
+				<i class="fa fa-beer score"></i>
+				<i class="fa fa-beer background"></i>
+			</div>
+			<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
+		</div>
+		{% endfor %}
+	</section>
+
+	<section id='most_checked_in' class='beers'>
+		<h3>Most Checked in Beers</h3>
+		{% for beer in most_checked_in %}
+		<div class='beer'>
+			<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
+				<i class="fa fa-beer score"></i>
+				<i class="fa fa-beer background"></i>
+			</div>
+			<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
+		</div>
 		{% endfor %}
 	</section>
 
 	<section>
 		<h3>Recent Favorite Styles</h3>
 		{% for style in recent_fav_styles %}
+		<div>
 			<p>{{ style.beer_type }}</p>
+		</div>
 		{% endfor %}
 	</section>
 
 	</article>
 
+{% endblock %}
+
+{% block favicon %}
+	<link rel='shortcut icon' type='image/png' href='/favicon/beer.png' />
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel='stylesheet' type='text/css' media='screen' href='css/beer.css' />
+{% endblock %}
+
+{% block javascript %}
+	<script src="/js/beer.js"></script>
 {% endblock %}
