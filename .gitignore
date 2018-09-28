@@ -1,3 +1,6 @@
 vendor
 bower_components
 error_log
+.vscode
+
+beerdata.db

@@ -18,6 +18,7 @@ $createsql =
 	venue_name TEXT,
 	venue_city TEXT,
 	venue_state TEXT,
+	venue_country TEXT,
 	venue_lat REAL,
 	venue_lng REAL,
 	rating_score NUMERIC,
@@ -27,7 +28,14 @@ $createsql =
 	brewery_url TEXT,
 	brewery_country TEXT,
 	brewery_city TEXT,
-	brewery_state TEXT
+	brewery_state TEXT,
+	flavor_profiles TEXT,
+	purchase_venue TEXT,
+	serving_type TEXT,
+	checkin_id INTEGER,
+	bid INTEGER,
+	brewery_id INTEGER,
+	photo_url TEXT
 )";
 
 $db->query($resetsql);

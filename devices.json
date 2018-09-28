@@ -33,5 +33,9 @@
 	"nexus6": {
 		"name":	"Nexus 6",
 		"OS":		"Android"
+	},
+	"oneplus3t": {
+		"name": "OnePlus 3T",
+		"OS": "Android"
 	}
 }

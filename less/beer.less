@@ -1,5 +1,9 @@
+@import 'inc/colors';
+
+@beer_color: #FBB117;
+
 section {
-	background-color: chocolate;
+	background-color: @secondary_background_color;
 	padding: 1rem;
 	margin: 1rem;
 	display: flex;
@@ -16,7 +20,8 @@ section {
 
 .beers {
 	a {
-		margin-left: 1.3rem;
+		margin-left: 1.6rem;
+		line-height: 2rem;
 	}
 	.fa-beer {
 		position: absolute;
@@ -29,10 +34,11 @@ section {
 	}
 	.score {
 		z-index: 2;
-		color: #FBB117;
+		color: @beer_color;
 	}
 	.rating {
 		position: relative;
+		font-size: 1.5rem;
 	}
 }
 
