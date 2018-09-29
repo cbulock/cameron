@@ -1,6 +1,7 @@
 {
 	"map":	{
-		"beer":	"Beer"
+		"beer":					"Beer",
+		"always_sunny":	"AlwaysSunny"
 	},
 	"default":		"Home",
 	"not_found":	"NotFound"

@@ -6,40 +6,42 @@
 
 	<article>
 
-	<section id='recent_beers' class='beers'>
-		<h3>Recent New Beers</h3>
-		{% for beer in recent %}
-		<div class='beer'>
-			<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
-				<i class="fa fa-beer score"></i>
-				<i class="fa fa-beer background"></i>
-			</div>
-			<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
-		</div>
-		{% endfor %}
-	</section>
+		<h2>Beer</h2>
 
-	<section id='most_checked_in' class='beers'>
-		<h3>Most Checked in Beers</h3>
-		{% for beer in most_checked_in %}
-		<div class='beer'>
-			<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
-				<i class="fa fa-beer score"></i>
-				<i class="fa fa-beer background"></i>
+		<section id="recent_beers" class="beers">
+			<h3>Recent New Beers</h3>
+			{% for beer in recent %}
+			<div class="beer">
+				<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
+					<i class="fa fa-beer score"></i>
+					<i class="fa fa-beer background"></i>
+				</div>
+				<a href="{{ beer.beer_url }}"><span class="brewery">{{ beer.brewery_name }}</span> <span class="beer-name">{{ beer.beer_name }}</span></a>
 			</div>
-			<a href="{{ beer.beer_url }}">{{ beer.brewery_name }} {{ beer.beer_name }}</a>
-		</div>
-		{% endfor %}
-	</section>
+			{% endfor %}
+		</section>
 
-	<section>
-		<h3>Recent Favorite Styles</h3>
-		{% for style in recent_fav_styles %}
-		<div>
-			<p>{{ style.beer_type }}</p>
-		</div>
-		{% endfor %}
-	</section>
+		<section id="most_checked_in" class="beers">
+			<h3>Most Checked in Beers</h3>
+			{% for beer in most_checked_in %}
+			<div class="beer">
+				<div class='rating' data-rating='{{ beer.rating_score }}' data-rating-percent='{{ (beer.rating_score / 5) * 100 }}'{% if beer.rating_score %} title='Rated {{ beer.rating_score }}/5'{% endif %}>
+					<i class="fa fa-beer score"></i>
+					<i class="fa fa-beer background"></i>
+				</div>
+				<a href="{{ beer.beer_url }}"><span class="brewery">{{ beer.brewery_name }}</span> <span class="beer-name">{{ beer.beer_name }}</span></a>
+			</div>
+			{% endfor %}
+		</section>
+
+		<section>
+			<h3>Recent Favorite Styles</h3>
+			{% for style in recent_fav_styles %}
+			<div>
+				<p>{{ style.beer_type }}</p>
+			</div>
+			{% endfor %}
+		</section>
 
 	</article>
 

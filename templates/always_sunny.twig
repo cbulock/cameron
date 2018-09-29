@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block title %}It's Always Sunny{% endblock %}
+
+{% block content %}
+
+	<article>
+
+		<h2>It's Always Sunny</h2>
+
+		<section id="episode_ranking">
+			<h3>All Episodes Ranked</h3>
+			{% for episode in list %}
+			<div class="episode">
+				<span class="rank">{{ episode.Ranking }}</span>
+				<span class="title">{{ episode.Title }}</span>
+				<span class="showing">Season {{ episode.Season }} Episode {{ episode.Episode }}</span>
+			</div>
+			{% endfor %}
+		</section>
+
+	</article>
+
+{% endblock %}
+
+{% block favicon %}
+	<link rel='shortcut icon' type='image/png' href='/favicon/frank.png' />
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel='stylesheet' type='text/css' media='screen' href='css/always_sunny.css' />
+{% endblock %}

@@ -1,7 +1,7 @@
 <?php
 
 $json_file = "beerdata.json";
-$db_file = "beerdata.db";
+$db_file = "../beerdata.db";
 
 $beerdata = json_decode( file_get_contents($json_file), 1 );
 $db = new SQLite3($db_file);
