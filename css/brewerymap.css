@@ -1,0 +1,1 @@
+#map{height:50em;width:100%;color:#000}#map h1{font-size:1rem}#map .chart{min-width:14em}#map .chart>div{display:flex;justify-content:space-around}#map .chart .response{font-weight:800;font-size:1.5em;text-align:center}#map .chart .response .yes{color:green}#map .chart .response .no{color:red}

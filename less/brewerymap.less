@@ -1,0 +1,26 @@
+#map {
+	height: 50em;
+	width: 100%;
+	color: black;
+	h1 {
+		font-size: 1rem;
+	}
+	.chart {
+		min-width: 14em;
+		&>div {
+			display: flex;
+			justify-content: space-around
+		}
+		.response {
+			font-weight: 800;
+			font-size: 1.5em;
+			text-align: center;
+			.yes {
+				color: green;
+			}
+			.no {
+				color: red;
+			}
+		}
+	}
+}
