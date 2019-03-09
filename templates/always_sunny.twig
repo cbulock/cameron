@@ -11,11 +11,11 @@
 		<section id="episode_ranking">
 			<h3>All Episodes Ranked</h3>
 			{% for episode in list %}
-			<div class="episode">
-				<span class="rank">{{ episode.Ranking }}</span>
-				<span class="title">{{ episode.Title }}</span>
-				<span class="showing">Season {{ episode.Season }} Episode {{ episode.Episode }}</span>
-			</div>
+				<div class="episode {{ (episode.Ranking <= 20) ? 'high' : 'low' }}">
+					<span class="rank">{{ episode.Ranking }}</span>
+					<span class="title"><a href="https://www.imdb.com/title/{{ episode.IMDB }}/">{{ episode.Title }}</a></span>
+					<span class="showing">Season {{ episode.Season }} Episode {{ episode.Episode }}</span>
+				</div>
 			{% endfor %}
 		</section>
 

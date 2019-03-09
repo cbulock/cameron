@@ -2,22 +2,31 @@
 @import 'inc/colors';
 
 body {
-	background-color: @background_color;
+	min-height: 100vh;
+	height: 100%;
+	background: @background_color;
+	background: linear-gradient(@background_start_color 0%, @background_end_color 100%);
 	color: @text_color;
-	margin: 0;
+	margin: 0 0 2em 0;
 	&> header {
 		width: 100%;
-		background-color: @header_color;
-		ul {
-			width: 25rem;
-			margin: 0 0 0 auto;
-			li {
-				display: table-cell;
+		nav {
+			display: flex;
+			div {
+				margin: 0 1rem;
 				text-align: center;
-				width: 1%;
 				text-transform: uppercase;
 				a {
 					padding-left: 0.2rem;
+				}
+			}
+			.home {
+				margin-right: auto;
+				img {
+					height: 19px;
+					top: 4px;
+					position: relative;
+					border-radius: 7px;
 				}
 			}
 		}
@@ -28,7 +37,7 @@ a {
 	color: @text_color;
 	text-decoration: none;
 	&:hover {
-		color: darken(@text_color, 25%);
+		color: darken(@text_color, 15%);
 		text-decoration: underline;
 	}
 }
@@ -43,8 +52,13 @@ main {
 }
 
 footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
 	margin-top: 2rem;
-	background-color: @footer_color;
+	color: @text_color;
+	background: @background_start_color;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 1rem;
@@ -53,3 +67,4 @@ footer {
 		line-height: 1.3rem;
 	}
 }
+

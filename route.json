@@ -1,6 +1,7 @@
 {
 	"map":	{
 		"beer":					"Beer",
+		"brewerymap":			"BreweryMap",
 		"always_sunny":	"AlwaysSunny"
 	},
 	"default":		"Home",

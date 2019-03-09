@@ -1,10 +1,10 @@
 <?php
 namespace cbulock\me\beer;
 
-class DB extends \SQLite3{
+class DB extends \SQLite3 {
 
 	public function __construct() {
-		$db_file = "beerdata.db";
+		$db_file = "/home/cameron/public_html/beerdata.db";
 		$this->open( $db_file );
 	}
 

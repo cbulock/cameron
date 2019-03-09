@@ -63,12 +63,20 @@ class Data {
 	}
 
 	public function recent_fav_styles() {
+		$most_recent_checkin_sql = "
+			SELECT
+			created_at
+			FROM beerdata
+			ORDER BY created_at DESC
+			LIMIT 1
+		";
+
 		$sql = "
 			SELECT
 			beer_type, COUNT(beer_type) AS count
 			FROM beerdata
 			WHERE date(created_at)
-			BETWEEN date('now', '-2 months') AND date('now')
+			BETWEEN date( (".$most_recent_checkin_sql."), '-2 months') AND date((".$most_recent_checkin_sql."))
 			GROUP BY beer_type
 			ORDER BY count DESC
 			LIMIT 10;
@@ -76,5 +84,49 @@ class Data {
 		$result = $this->db->query($sql);
 
 		return $this->db->fetchAll($result);
+	}
+
+	public function getList($page = 1, $page_size = 10) {
+		$sql = "
+			SELECT
+			COUNT(checkin_id) AS count
+			FROM beerdata
+		";
+		$count_result = $this->db->query($sql);
+		$total = $this->db->fetchAll($count_result)[0]['count'];
+		$pages = ceil( $total / $page_size );
+		$offset = ( $page - 1 ) * $page_size;
+
+		$sql = "
+			SELECT
+			*
+			FROM beerdata
+			ORDER BY created_at DESC
+			LIMIT $page_size
+			OFFSET $offset
+		";
+		$result = $this->db->query($sql);
+
+		$db_results = $this->db->fetchAll($result);
+
+		return [
+			'page'        => $page,
+			'total_pages' => $pages,
+			'page_size'   => $page_size,
+			'total'       => $total,
+			'results'     => $db_results
+		];
+	}
+
+	public function get($id) {
+		$sql = "
+			SELECT
+			*
+			FROM beerdata
+			WHERE checkin_id = $id
+		";
+		$result = $this->db->query($sql);
+
+		return $this->db->fetchAll($result)[0];
 	}
 }

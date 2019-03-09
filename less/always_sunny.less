@@ -5,19 +5,36 @@
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-content: flex-start;
-	height: 5rem;
-	.rank {
+	&.high {
 		height: 5rem;
-		width: 5rem;
-		font-size: 4rem;
-		margin-top: 1rem;
+		.rank {
+			height: 5rem;
+			width: 5rem;
+			font-size: 4rem;
+			margin-top: 1rem;
+		}
+		.showing {
+			font-size: 0.9rem;
+		}
+	}
+	&.low {
+		height: 3.5rem;
+		font-size: 0.8rem;
+		.rank {
+			height: 3rem;
+			width: 3.5rem;
+			font-size: 2rem;
+			margin-top: 0.8rem;
+		}
+		.showing {
+			font-size: 0.7rem;
+		}
 	}
 	.title {
 		font-weight: 700;
 	}
 	.showing {
 		text-transform: uppercase;
-		font-size: 0.9rem;
 		color: @subtext_color;
 	}
 }

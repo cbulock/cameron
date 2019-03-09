@@ -4,7 +4,7 @@
 		<title>{% block title %}About Cameron Bulock{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		{% block favicon %}
-			<link rel='shortcut icon' type='image/png' href='//www.gravatar.com/avatar/baf1ada66011a8dace4bee65cf78cb21?s=32&d=retro&r=pg' />
+			<link rel='shortcut icon' type='image/png' href='//www.gravatar.com/avatar/baf1ada66011a8dace4bee65cf78cb21?s=32' />
 		{% endblock %}
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel='stylesheet' type='text/css' media='screen' href='css/base.css' />
@@ -14,11 +14,17 @@
 	</head>
 	<body>
 		<header>
-			<ul>
-				<li><i class="fa fa-github"></i><a href='https://github.com/cbulock'>GitHub</a></li>
-				<li><i class="fa fa-twitter"></i><a href='https://twitter.com/cameronb'>Twitter</a></li>
-				<li><i class="fa fa-linkedin-square"></i><a href='https://www.linkedin.com/in/cbulock'>Linkedin</a></li>
-			</ul>
+			<nav>
+				<div class="home">
+					{% block homelink %}
+						<img src="//www.gravatar.com/avatar/baf1ada66011a8dace4bee65cf78cb21?s=32" alt="Cameron headshot">
+						<a href="/">Home</a>
+					{% endblock %}
+				</div>
+				<div><i class="fa fa-github"></i><a href='https://github.com/cbulock'>GitHub</a></div>
+				<div><i class="fa fa-twitter"></i><a href='https://twitter.com/cameronb'>Twitter</a></div>
+				<div><i class="fa fa-linkedin-square"></i><a href='https://www.linkedin.com/in/cbulock'>Linkedin</a></div>
+			</nav>
 		</header>
 		<main>
 			{% block content %}{% endblock %}
