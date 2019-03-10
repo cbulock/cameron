@@ -1,4 +1,5 @@
 @import 'inc/colors';
+@import 'inc/devices';
 
 #me {
 	img {
@@ -32,8 +33,10 @@
 	ul {
 		display: flex;
 		justify-content: space-evenly;
+		flex-wrap: wrap;
 	}
 	li {
+		align-self: center;
 		font-size: 1.6rem;
 		font-weight: 600;
 		font-style: italic;
@@ -42,6 +45,9 @@
 		text-align: center;
 		text-transform: uppercase;
 		border-radius: 2rem;
+		@media @smartphones {
+			width: 80%;
+		}
 		&:hover {
 			background-color: darken(@button_color, 6%);
 		}

@@ -1,13 +1,16 @@
 @import 'inc/typography';
 @import 'inc/colors';
+@import 'inc/devices';
 
 body {
+	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
 	height: 100%;
 	background: @background_color;
 	background: linear-gradient(@background_start_color 0%, @background_end_color 100%);
 	color: @text_color;
-	margin: 0 0 2em 0;
+	margin: 0;
 	&> header {
 		width: 100%;
 		nav {
@@ -49,19 +52,20 @@ ul {
 
 main {
 	margin: 1rem;
+	flex: 1 0 auto;
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	box-sizing: border-box;
+	flex-shrink: 0;
 	margin-top: 2rem;
 	color: @text_color;
 	background: @background_start_color;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 1rem;
+	@media @smartphones {
+		flex-direction: column;
+	}
 	p {
 		text-align: center;
 		line-height: 1.3rem;
