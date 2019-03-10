@@ -15,5 +15,5 @@ gulp.task('less', function () {
 });
 
 gulp.task('default', ['less'], function () {
-  gulp.watch(['less/*.less', 'less/inc/*.less'], ['less']);
+  gulp.watch(['less/*.less', 'less/inc/*.less', 'less/components/*.less'], ['less']);
 });
